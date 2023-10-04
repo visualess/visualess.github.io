@@ -1,0 +1,25 @@
+@charset "UTF-8";
+html {font-size: 15px;scroll-behavior: smooth;}
+body {font-family: 'Open Sans', sans-serif;color: #111111;margin: 0 !important; padding: 0 !important;}
+body.black{width: 100vw;height: 100vh;background: #202126 !important;color: white;flex-direction: column;}
+input:focus{ outline:0;}
+button:focus{outline:0;}
+a{text-decoration: none !important;content: ""}
+input{cursor: text;}
+button{cursor: pointer;}
+.pFixed{position: fixed;top: 0;left: 0;width: 100%;height: 100%;}
+.dNone{display: none;}
+#aCarateres{position: fixed;top: 10px;right: 10px;background: white;font-size: 15px;display: flex;align-items: center;padding: 2px;box-shadow: 1px 1px 4px;border-radius: 3px;}#iAcart{margin: 0px 5px;cursor: pointer;}
+#info{position: fixed;top: 35px;right: 10px;background: #ffffffd6;border-radius: 3px;border: 1px #9e9e9e solid;list-style: none;margin: 0;padding: 2px;box-shadow: 1px 1px 2px;}
+/*---------------------------------------------------------------------*/
+/*html{overflow: -moz-scrollbars-none;scroll-width: none;margin-right: 20px;}
+::-webkit-scrollbar{width: 0;background: transparent;}
+*/
+
+
+
+
+
+
+
+
