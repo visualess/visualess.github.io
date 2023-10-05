@@ -25,10 +25,10 @@ button{cursor: pointer;}
     position: fixed;
     align-items: center;
     height: 70px;
-    border-bottom: 1px transparent solid;
+    /*border-bottom: 1px transparent solid;*/
     color: white;transition: all .5s}
-.header.fi{background: #303134;
-    border-bottom: 1px white solid;}
+.header.fi{background: rgba(31,39,50,.73);
+    /*border-bottom: 1px white solid;*/}
 .header .content{list-style: none;
     padding: 0;
     margin: auto;
@@ -45,7 +45,7 @@ button{cursor: pointer;}
 .header button span{display: none;}
 .header h2 p{display: none;}
 .Inicio{position: fixed;
-    background: #202126ed;
+    background: rgba(31,39,50,.73);
     top: 72px;
     width: 100%;
     height: calc(100% - 72px);
