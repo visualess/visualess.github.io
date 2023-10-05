@@ -15,11 +15,194 @@ button{cursor: pointer;}
 /*html{overflow: -moz-scrollbars-none;scroll-width: none;margin-right: 20px;}
 ::-webkit-scrollbar{width: 0;background: transparent;}
 */
+@media (min-width:320px){
+.body{background: #303134;
+    min-height: 100vh;color: white}
+/*Header de la paginas*/
+.header{display: flex;
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px transparent solid;
+    color: white;transition: all .5s}
+.header.fi{background: #303134;
+    border-bottom: 1px white solid;}
+.header .content{list-style: none;
+    padding: 0;
+    margin: auto;
+    margin-left: 10px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 50%;}
+.header .content li{margin: auto;}
+.header button{font-size: 150%;
+    background: transparent;
+    color: white;
+    border: 0;display: flex;align-items: center;}
+.header button span{display: none;}
+.header h2 p{display: none;}
+.Inicio{position: fixed;
+    background: #202126ed;
+    top: 72px;
+    width: 100%;
+    height: calc(100% - 72px);
+    color: white;display: none;
+}
+/*Listado de el inicio*/
+.Inicio .ulInicio{list-style: none;
+    padding: 0;
+    margin: auto;
+    width: 80%;
+    display: none;
+    flex-direction: column;
+    transition: all .3s;
+    opacity: 0;}
+.Inicio .ulInicio > li{display: flex;
+    background: #303134;
+    margin: 10px;cursor: pointer;
+    border-radius: 7px;
+    align-items: center;
+    transition: all .3s;
+    opacity: .8;}
+.Inicio .ulInicio > li > img{width: 100px;
+    margin: 5px;}
+#Inicio .ulInicio > li:hover{transform: scale(1.05);opacity: 1;box-shadow: 0px 0px 5px white;}
+/*Secion de peliculas.. seleccionar año*/
+#InicioPeli{
+	flex-direction: column;
+	width: 90%;
+    margin: auto;
+    display: none;
+    transition: all .3s;
+    opacity: 0;
+    transform: translateX(-50px);}
+#InicioPeli div{display: flex;
+    flex-wrap: wrap;}
+#InicioPeli div a{margin:5px 15px;
+    color: white;
+    font-size: 120%;
+    background: #673ab7;
+    padding: 5px;
+    border: 1px wheat;
+    border-radius: 7px;
+    transition: all .3s;
+    opacity: .8;}
+#InicioPeli div a:hover{transform: scale(1.2);opacity: 1}
+/*Menu de inicio series*/
+#InicioSeries{
+	width: 90%;
+	flex-direction: column;
+    margin: auto;
+    transition: all .3s;
+    opacity: 0;
+    transform: translateX(-50px);
+    display: none;}
+#InicioSeries div{display: flex;flex-wrap: wrap;}
+#InicioSeries div a{margin: 14px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 120%;
+    background: #303134;
+    border-radius: 7px;
+    transition: all .3s;
+    opacity: .8;}
+#InicioSeries div a:hover{opacity: 1;transform: scale(1.1);}
+.sectionUne{
+	background: url(../img/fondo.jpg) no-repeat top center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+.sectionUne div{width: 100%;
+    height: 100%;
+    background: #000000c9;
+    display: flex;
+    flex-direction: column;text-align: center;}
+.sectionUne h1{margin-top: auto;font-size: 400%;}
+.sectionUne p{width: 90%;margin: 1px auto;}
+.sectionUne a{margin: 10px auto;
+    color: white;
+    font-size: 250%;}
+}
+@media (min-width:450px){
+.header h2 p{font-size: 50%;
+    margin: 0; display: block;}
+.Inicio .ulInicio{width: 50%;}
+#InicioPeli{width: 70%;}
+#InicioSeries{width: 70%;}
+}
+@media (min-width:765px){
+.header button span{margin: 5px; display: block;}
+.Inicio .ulInicio{width: 40%;}
+#InicioPeli{width: 60%;}
+#InicioSeries{width: 60%;}
+#InicioSeries div a{width: 40%;}
+
+}
 
 
 
 
 
+
+
+
+.sectionHeaderPelis{background: url(../img/img.jpg) no-repeat top center;
+    background-size: cover;
+    display: flex;
+    color: white;}
+.sectionHeaderPelis .sectionHeaderPelisDiv{display: flex;
+    height: 200px;background: #0000009c;}
+.sectionHeaderPelis .sectionHeaderPelisDiv div{padding: 30px;
+    
+    margin-right: 100px;
+}
+.listaPelis{display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;}
+.listaPelisOl{margin: 30px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;}
+.Item_listaPelis{width: 30%;
+    border: 1px red solid;
+    margin: 10px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px black;position: relative;}
+.Item_listaPelis > img{width: 40%;
+    height: 100%;box-shadow: 4px 0px 18px 6px black;
+}
+.Item_listaPelis > div{width: 60%;
+    height: 100%;text-align: center;
+}
+.descarga{position: absolute;
+    right: 0;
+    background: white;
+    transition: all .5s;
+    transform: translateX(60px);
+    opacity: 0;display: flex;
+    flex-direction: column;}
+.Item_listaPelis:hover .descarga{opacity: 1;
+    transform: translate(0,0);}
+.descarga a{margin: auto;
+    font-size: 150%;
+    color: black;
+    border: 1px black solid;
+    width: 80%;
+    border-radius: 4px;
+    padding: 2px;
+    box-shadow: 2px 1px 3px black;
+    background: #00000024;}
 
 
 
