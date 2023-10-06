@@ -14,9 +14,15 @@ button{cursor: pointer;}
 /*---------------------------------------------------------------------*/
 /*html{overflow: -moz-scrollbars-none;scroll-width: none;margin-right: 20px;}
 ::-webkit-scrollbar{width: 0;background: transparent;}
-*/
+*/   /**{border: 1px red solid}*/
 .body{background: #303134;min-height: 100vh;color: white; padding-top: 60px !important}
-
+.IrAriba{position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 30;
+    font-size: 400%;
+    color: white;
+    text-shadow: 2px 2px 5px black;}
 #NavSeries .col-12{display: flex;}
 #NavSeries .col-12 > a{margin: 5px;
     background: #343a40;
@@ -39,6 +45,62 @@ button{cursor: pointer;}
     margin: 18px;}
 #Caruselheader .carousel-caption{background: #000000b3;}
 
+
+/*Estilo de las paginas de peliculas*/
+.headerPelis{height: calc(100vh - 60px);
+    background: url(../img/fondo.jpg) no-repeat top center;
+    display: flex;
+    background-size: cover;
+    width: 100vw;}
+.headerPelis .content{display: flex;
+    background: #000000c9;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;}
+.headerPelis .content > img{width: 250px;margin-top: auto;}
+.headerPelis .content > div{margin-bottom: 20px;}
+.headerPelis .content > div h1{font-size: 300%;}
+
+.listaPelis.container{}
+.listaPelis.container .target{position: relative;
+    padding: 0;transition: all .3s;}
+.listaPelis.container .target .panelOscuro{background: #000000c9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .3s;}
+.listaPelis.container .target:hover .panelOscuro{opacity: 1;}
+
+
+
+
+.listaPelis.container .target > img{width: 100%;}
+.listaPelis.container .modal-body img{width: 50%;}
+.listaPelis.container .modal-body{display: flex;}
+.listaPelis.container .modal-body > div{width: 50%;display: flex;flex-direction: column;padding: 12px;}
+.listaPelis.container .modal-body > div *{margin: auto;width: 100%}
+.listaPelis.container .modal-body > div p{height: 50%;}
+
+
+
+
+
+
+
 @media (min-width:765px){
 #Caruselheader .carousel-caption h2{flex-direction: row;}
+.headerPelis .content{flex-direction: row;}
+.headerPelis .content > div {margin-top: auto;}
+
+
+}
+@media (min-width:1024px){
+.headerPelis .content > div {font-size: 150%;padding: 15px;}
+
+
+
 }
