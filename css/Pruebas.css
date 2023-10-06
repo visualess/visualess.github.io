@@ -20,9 +20,18 @@ button{cursor: pointer;}
     bottom: 20px;
     right: 20px;
     z-index: 30;
-    font-size: 400%;
+    font-size: 20%;
     color: white;
-    text-shadow: 2px 2px 5px black;}
+    text-shadow: 2px 2px 5px black;transition: all .4s;opacity: 0;}.IrAriba.fi{opacity: 1;font-size: 400%;}
+.footer{    padding: 10px;
+    box-shadow: 0px 0px 5px;
+    background: #212529bf;
+    font-size: 120%;}.footer a{color: #6c757d}
+
+
+
+
+
 #NavSeries .col-12{display: flex;}
 #NavSeries .col-12 > a{margin: 5px;
     background: #343a40;
@@ -44,8 +53,19 @@ button{cursor: pointer;}
     height: 150px;
     margin: 18px;}
 #Caruselheader .carousel-caption{background: #000000b3;}
-
-
+.tecnUser{min-height: 50vh;
+    padding: 20px;
+    text-align: center;
+    font-size: 120%;}
+.tecnUser .col-12{display: flex;}
+.tecnUser img{width: 75%;
+    height: 75px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 12px black;
+    border-radius: 16px;
+    opacity: .7;
+    transition: all .3s;}
+.tecnUser img:hover{opacity: 1;transform: scale(1.1);}
 /*Estilo de las paginas de peliculas*/
 .headerPelis{height: calc(100vh - 60px);
     background: url(../img/fondo.jpg) no-repeat top center;

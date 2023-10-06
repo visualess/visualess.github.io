@@ -39,7 +39,15 @@ $('').toggleClass();
 */
 $(function() {
 
-
+window.onscroll = () =>{
+	var s = getScroll();
+	if (s<150){
+		$('.IrAriba').removeClass('fi');
+	} else {
+		$('.IrAriba').addClass('fi');
+	} 
+}
+function getScroll() {return window.pageYOffset}
 /*--------------------------------------------------------------*/
 function aCaracter(a,b){var temp,sum = "";var c = ["qwertyuiopasdfghjklzxcvbnm","QWERTYUIOPASDFGHJKLZXCVBNM","0123456789"];if (a == undefined) {a=10;}for (var i = 0; i < a; i++) {if (b == undefined){temp = c[aNumero(2)];temp = temp[aNumero(temp.length - 1)];}else{do{temp = aNumero(2);if (temp == 0 && b.indexOf("q") != -1) {temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else if(temp == 1 && b.indexOf("Q") != -1){temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else if(temp == 2 && b.indexOf("1") != -1){temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else{temp = -1;}}while(temp == -1);}sum += temp;}return sum;}
 function aBooblean(){if (Math.random() > 0.5){return true;} else {return false;}}
