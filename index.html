@@ -23,7 +23,7 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Pelicula</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" aria-current="page" data-bs-toggle="modal" data-bs-target="#NavSeries">
           <a class="nav-link" href="#">Series</a>
         </li>
         <li class="nav-item">
@@ -49,7 +49,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecione la categoria de la Peli ...</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecione año de la Peli ...</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -77,120 +77,81 @@
       	<a class="btn btn-outline-primary" role="button" href="#">2002</a>
       	<a class="btn btn-outline-primary" role="button" href="#">2001</a>
       	<a class="btn btn-outline-primary" role="button" href="#">2000</a>
-
       </div>
     </div>
   </div>
 </div>
+<!-- Modal -->
+<div class="modal fade modal-lg modal-dialog-scrollable" id="NavSeries" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecione la categoria de la Serie ...</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      	<div class="container">
+      		<div class="row">
+      			<div class="col-12 col-md-6"><a href="#">
+      				<img class="icon" src="img/da.png"><h2>NETFLIX</h2>
+      			</a></div>
+      			<div class="col-12 col-md-6"><a href="#">
+      				<img class="icon" src="img/ing.png"><h2>Ingles</h2>
+      			</a></div>
+      			<div class="col-12 col-md-6"><a href="#">
+      				<img class="icon" src="img/es.png"><h2>Español</h2>
+      			</a></div>
+      			<div class="col-12 col-md-6"><a href="#">
+      				<img class="icon" src="img/cu.png"><h2>Cubanos</h2>
+      			</a></div>
+      		</div>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Caruselheader">
+<div id="Caruselheader" class="carousel slide h-70" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2009/Ninja%20(2009)/fanart.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+        <h2><img width="50px" height="70px" src="https://visuales.uclv.cu/Peliculas/Extranjeras/2009/Ninja%20(2009)/poster.jpg">Ninja</h2>
+        <p class="d-none d-md-block">Casey es un chico occidental cuya pasión por la filosofía ninja le lleva hasta Japón para estudiar Ninjutsu. Su instrucción avanza favorablemente y su Sensei le pregunta si estaría dispuesto a volver a Nueva York para proteger la legendaria Yoroi Bitsu, un arcón blindado que contiene las armas de los últimos Ninja Koga</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Dark%20Places%20(2015)/fanart.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+        <h2><img width="50px" height="70px" src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Dark%20Places%20(2015)/poster.jpg"> Dark Places </h2>
+        <p class="d-none d-md-block">Una chica de Kansas sobrevive a la masacre de su familia y testifica en contra de su hermano como el asesino. 25 años después será visitada por una sociedad secreta que reclama la inocencia de su hermano. De algún modo, tan sólo reviviendo la tragedia podrá averiguar la verdad.</p>
+      </div>
+    </div>
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Extinction%20(2015)/fanart.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+        <h2><img width="50px" height="70px" src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Extinction%20(2015)/poster.jpg"> Extinction  </h2>
+        <p class="d-none d-md-block">Nueve años después de que una infección convirtiese a gran parte de la humanidad en criaturas salvajes y sin intelecto, Patrick, Jack y Lu, una niña de nueve años, sobreviven en aparente tranquilidad en Harmony, un rincón olvidado, cubierto por nieves perennes. Sin embargo, algo terrible ocurrió entre Patrick y Jack y un odio profundo pervive entre ellos. Cuando las criaturas vuelven a aparecer, Patrick y Jack deberán dejar atrás el rencor para proteger lo que más quieren.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#Caruselheader" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#Caruselheader" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></div>
 
 
-
-
-
-
-
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
 <!----------------------------------------------------------------------->
 </body>
 	<script src="js/jquery.js"></script>

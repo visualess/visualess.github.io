@@ -15,12 +15,30 @@ button{cursor: pointer;}
 /*html{overflow: -moz-scrollbars-none;scroll-width: none;margin-right: 20px;}
 ::-webkit-scrollbar{width: 0;background: transparent;}
 */
-.body{background: #303134;min-height: 100vh;color: white}
+.body{background: #303134;min-height: 100vh;color: white; padding-top: 60px !important}
 
+#NavSeries .col-12{display: flex;}
+#NavSeries .col-12 > a{margin: 5px;
+    background: #343a40;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    border: 1px #7b7d80 solid;
+    box-shadow: 0px 2px 3px #0d6efd;}
+#NavSeries .icon{width: 50px;height: 50px;}
+#Caruselheader{height:calc(100vh - 60px);display: flex;}
+#Caruselheader .carousel-item{height: 100%;}
+#Caruselheader .carousel-item > img{height: 100%;}
+#Caruselheader .carousel-caption h2{display: flex;
+    align-items: center;
+    flex-direction: column;}
+#Caruselheader .carousel-caption img{    width: 100px;
+    height: 150px;
+    margin: 18px;}
+#Caruselheader .carousel-caption{background: #000000b3;}
 
-
-
-
-
-
-
+@media (min-width:765px){
+#Caruselheader .carousel-caption h2{flex-direction: row;}
+}
