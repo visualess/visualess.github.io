@@ -15,7 +15,7 @@ button{cursor: pointer;}
 /*html{overflow: -moz-scrollbars-none;scroll-width: none;margin-right: 20px;}
 ::-webkit-scrollbar{width: 0;background: transparent;}
 */   /**{border: 1px red solid}*/
-.body{background: #303134;min-height: 100vh;color: white; padding-top: 60px !important}
+.body{background: #303134;min-height: 100vh;color: white;}
 .IrAriba{position: fixed;
     bottom: 20px;
     right: 20px;
@@ -27,8 +27,24 @@ button{cursor: pointer;}
     box-shadow: 0px 0px 5px;
     background: #212529bf;
     font-size: 120%;}.footer a{color: #6c757d}
-
-
+nav.navbar{position: fixed;
+    top: 10px;
+    left: 10%;
+    width: 80%;
+    z-index: 100;
+    border-radius: 10px;
+    border: 1px var(--bs-primary) solid;
+    box-shadow: 1px 1px 2px white;opacity: .8;
+    transform: scale(.9);transition: all .3s;}
+nav.navbar:hover{opacity: 1;
+    transform: scale(1.1);}
+.header .container{padding: 25px;} 
+.header .container{padding: 25px;}   
+.header .row{margin-top: -80px;background: #6f42c1;padding: 15px;border-radius: 7px;}
+.header .fondo{background: url(../img/ad.jpg) no-repeat center;background-size: cover;background-attachment: fixed;height: 70vh;}
+.header .fondo > div{display: flex;flex-direction: column;padding: 15px;text-align: center;width: 100%;height: 100%;background: #00000099;}
+.header .fondo > div > h1{margin-top: auto;text-shadow: 0px 0px 10px black;}
+.header .fondo > div > p{margin-bottom: 50px;text-shadow: 0px 0px 10px black;}
 
 
 
@@ -42,6 +58,37 @@ button{cursor: pointer;}
     border-radius: 10px;
     border: 1px #7b7d80 solid;
     box-shadow: 0px 2px 3px #0d6efd;}
+.header .row img{width: 150px;
+    height: 150px;}
+.header .row .col-12{display: flex;flex-direction: column;align-items: center;text-align: center;}
+/*Peliculas y series de la semana*/
+.peliYseriesSemana{}
+.peliYseriesSemana h2{border-bottom: 1px #6c757d solid;
+    padding: 7px;
+    font-size: 200%;
+    text-shadow: 0px 0px 4px #0d6efd;margin-bottom: 30px;}
+.peliYseriesSemana > .row > .col-12{padding-top: 30px;
+    padding-bottom: 30px;display: flex;
+    flex-direction: column;}
+.peliYseriesSemana button{margin-top: auto;}
+#seriesDeLaSemana h2{text-align: right;}
+.peliYseriesSemana .img{display: flex;}
+.peliYseriesSemana .img img{width: 40%;margin: auto;}
+
+#Colecciones{}
+#Colecciones .col-6{display: flex;}
+#Colecciones .col-6 img{width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px #0d6efd;
+    border-radius: 7px;
+}
+
+
+
+
+
 #NavSeries .icon{width: 50px;height: 50px;}
 #Caruselheader{height:calc(100vh - 60px);display: flex;}
 #Caruselheader .carousel-item{height: 100%;}
@@ -71,7 +118,7 @@ button{cursor: pointer;}
     background: url(../img/fondo.jpg) no-repeat top center;
     display: flex;
     background-size: cover;
-    width: 100vw;}
+    width: 100%;}
 .headerPelis .content{display: flex;
     background: #000000c9;
     flex-direction: column;
@@ -84,7 +131,7 @@ button{cursor: pointer;}
 
 .listaPelis.container{}
 .listaPelis.container .target{position: relative;
-    padding: 0;transition: all .3s;}
+    padding: 20px;transition: all .3s;cursor: pointer;}
 .listaPelis.container .target .panelOscuro{background: #000000c9;
     position: absolute;
     top: 0;
@@ -92,13 +139,14 @@ button{cursor: pointer;}
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: all .3s;}
-.listaPelis.container .target:hover .panelOscuro{opacity: 1;}
+    transition: all .3s;display: none;}
 
 
 
 
-.listaPelis.container .target > img{width: 100%;}
+.listaPelis.container .target > img{width: 100%;
+    box-shadow: 1px 2px 8px #0d6efd;
+    border-radius: 7px;}
 .listaPelis.container .modal-body img{width: 50%;}
 .listaPelis.container .modal-body{display: flex;}
 .listaPelis.container .modal-body > div{width: 50%;display: flex;flex-direction: column;padding: 12px;}
@@ -115,12 +163,13 @@ button{cursor: pointer;}
 #Caruselheader .carousel-caption h2{flex-direction: row;}
 .headerPelis .content{flex-direction: row;}
 .headerPelis .content > div {margin-top: auto;}
+nav.navbar{border-radius: 50px;}
 
-
+.peliYseriesSemana .img img{width: 100%;margin: auto;}
 }
 @media (min-width:1024px){
 .headerPelis .content > div {font-size: 150%;padding: 15px;}
-
-
+.header .fondo > div > h1 {margin-top: auto;width: 60%;font-size: 300%;text-align: left;}
+.header .fondo > div > p {margin-bottom: 70px;font-size: 130%;width: 80%;text-align: left;}
 
 }
