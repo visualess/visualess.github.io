@@ -38,86 +38,40 @@ $('').removeClass();
 $('').toggleClass();
 */
 $(function() {
+AOS.init({  
+	delay: 10, // values from 0 to 3000, with step 50ms
+  duration: 2000, // values from 0 to 3000, with step 50ms
+  once: true, // whether animation should happen only once - while scrolling down
+});
 
-var menuInicio = false;
-getId('menuInicio').onclick = function(){
-	if (menuInicio) {
-	getId('ulInicio').style.opacity = '0';
-	getId('ulInicio').style.transform = 'translateX(0px)';
-	getId('InicioPeli').style.transform = 'translateX(-50px)';
-	getId('InicioPeli').style.opacity = '0';
-	getId('InicioPeli').style.display = 'none';
-	getId('InicioSeries').style.transform = 'translateX(-50px)';
-	getId('InicioSeries').style.opacity = '0';
-	getId('InicioSeries').style.display = 'none';
-		setTimeout(function() {
-			getId('Inicio').style.display = 'none';
-		},200);
-menuInicio=false;
-	} else {
-		getId('Inicio').style.display = 'block';
-		getId('ulInicio').style.display = 'flex';
-		setTimeout(function() {
-			getId('ulInicio').style.opacity = '1';
-		},200);
-		menuInicio=true;
-}}
-	
-getId('openInicioPeli').onclick = function(){
-	getId('ulInicio').style.opacity = '0';
-	getId('ulInicio').style.transform = 'translateX(10px)';
-	getId('InicioPeli').style.display = 'flex';
-	setTimeout(function() {
-		getId('ulInicio').style.display = 'none';
-	getId('InicioPeli').style.opacity = '1';
-	getId('InicioPeli').style.transform = 'translateX(0px)';
-	},200);
-}
-getId('openInicioSeries').onclick = function(){
-	getId('ulInicio').style.opacity = '0';
-	getId('ulInicio').style.transform = 'translateX(10px)';
-	getId('InicioSeries').style.display = 'flex';
-	setTimeout(function() {
-		getId('ulInicio').style.display = 'none';
-	getId('InicioSeries').style.opacity = '1';
-	getId('InicioSeries').style.transform = 'translateX(0px)';
-	},200);
+
+
+
+
+$(".alertt").click(function() {
+	$('#alertaDesarrollo').css({'transform':'translate(0)','opacity':'1'});
+	/*setTimeout(function() {
+		cerrarAlertaDesarrollo()
+	},6000);*/
+});
+$("#closeAlertaDesarrollo").click(function() {cerrarAlertaDesarrollo()});
+function cerrarAlertaDesarrollo() {
+	$('#alertaDesarrollo').css({'transform':'translateY(120%)','opacity':'0'});
 }
 
-getId('closeInicioPeli').onclick = function(){
-	getId('InicioPeli').style.opacity = '0';
-	getId('InicioPeli').style.transform = 'translateX(-50px)';
-	setTimeout(function() {
-		getId('ulInicio').style.display = 'flex';
-		setTimeout(function() {
-			getId('ulInicio').style.opacity = '1';
-			getId('ulInicio').style.transform = 'translateX(0px)';
-			getId('InicioPeli').style.display = 'none';
-		},200);
-	},200);
-}
-getId('closeInicioSeries').onclick = function(){
-	getId('InicioSeries').style.opacity = '0';
-	getId('InicioSeries').style.transform = 'translateX(-50px)';
-	setTimeout(function() {
-		getId('ulInicio').style.display = 'flex';
-		setTimeout(function() {
-			getId('ulInicio').style.opacity = '1';
-			getId('ulInicio').style.transform = 'translateX(0px)';
-			getId('InicioSeries').style.display = 'none';
-		},200);
-	},200);
-}
+
+
+
+
 window.onscroll = () =>{
 	var s = getScroll();
-	if (s<100){
-		$('.header').removeClass('fi');
+	if (s<150){
+		$('.IrAriba').removeClass('fi');
 	} else {
-		$('.header').addClass('fi');
+		$('.IrAriba').addClass('fi');
 	} 
 }
 function getScroll() {return window.pageYOffset}
-
 /*--------------------------------------------------------------*/
 function aCaracter(a,b){var temp,sum = "";var c = ["qwertyuiopasdfghjklzxcvbnm","QWERTYUIOPASDFGHJKLZXCVBNM","0123456789"];if (a == undefined) {a=10;}for (var i = 0; i < a; i++) {if (b == undefined){temp = c[aNumero(2)];temp = temp[aNumero(temp.length - 1)];}else{do{temp = aNumero(2);if (temp == 0 && b.indexOf("q") != -1) {temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else if(temp == 1 && b.indexOf("Q") != -1){temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else if(temp == 2 && b.indexOf("1") != -1){temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else{temp = -1;}}while(temp == -1);}sum += temp;}return sum;}
 function aBooblean(){if (Math.random() > 0.5){return true;} else {return false;}}
