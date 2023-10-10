@@ -15,6 +15,60 @@ button{cursor: pointer;}
 /*html{overflow: -moz-scrollbars-none;scroll-width: none;margin-right: 20px;}
 ::-webkit-scrollbar{width: 0;background: transparent;}
 */   /**{border: 1px red solid}*/
+
+#loader{
+    position: fixed;
+    z-index: 25000;
+    background: #343a40;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:all .3s ease;
+}
+#loader::before{
+    content: "";
+    position: absolute;
+    border: 2px solid rgb(50, 150, 176);
+    width: 100px;
+    height: 100px;    
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(50, 150, 176,0);
+    border-top: 2px solid rgba(50, 150, 176,0);
+    animation: rotarload 1s linear infinite;
+    transform: rotate(0deg);      
+}
+
+@keyframes rotarload {
+  0%   {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+
+#loader::after {
+    content: "";
+    position: absolute;
+    border: 2px solid rgba(50, 150, 176,.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(50, 150, 176, 0);
+    border-top: 2px solid rgba(50, 150, 176, 0);
+    animation: rotarload 1s ease-out infinite;
+    transform: rotate(0deg);
+}
+#loader h2{font-size: 250%;}
+
+
+
+
+
+
+
 .body{background: #303134;min-height: 100vh;color: white;}
 .IrAriba{position: fixed;
     bottom: 20px;
@@ -23,6 +77,11 @@ button{cursor: pointer;}
     font-size: 20%;
     color: white;
     text-shadow: 2px 2px 5px black;transition: all .4s;opacity: 0;}.IrAriba.fi{opacity: 1;font-size: 400%;}
+.encabzadoSecion{border-bottom: 1px #6c757d solid;padding: 7px;font-size: 200%;text-shadow: 0px 0px 4px #0d6efd;margin-bottom: 30px;}
+.separadorSecion{margin-top: 50px;margin-bottom: 50px;}
+
+
+
 #alertaDesarrollo{position: fixed;
     z-index: 300;
     bottom: 10px;
@@ -68,12 +127,9 @@ nav.navbar:hover{opacity: 1;
 .header .row img{width: 150px;
     height: 150px;}
 .header .row .col-12{display: flex;flex-direction: column;align-items: center;text-align: center;}
+
 /*Peliculas y series de la semana*/
 .peliYseriesSemana{}
-.peliYseriesSemana h2{border-bottom: 1px #6c757d solid;
-    padding: 7px;
-    font-size: 200%;
-    text-shadow: 0px 0px 4px #0d6efd;margin-bottom: 30px;}
 .peliYseriesSemana > .row > .col-12{padding-top: 30px;
     padding-bottom: 30px;display: flex;
     flex-direction: column;}
@@ -82,26 +138,12 @@ nav.navbar:hover{opacity: 1;
 .peliYseriesSemana .img{display: flex;}
 .peliYseriesSemana .img img{width: 40%;margin: auto;}
 
-.descargaAndroid{height: 70vh;
-    background: url(../img/andrid.jpg) no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;}
-.descargaAndroid > div{width: 80%;
-    margin: auto;
-    background: #000000c9;
-    padding: 20px;
-    border-radius: 7px;
-    align-items: center;}
-.Recomendaciones{margin-top: 50px;
-    margin-bottom: 50px;}
-.Recomendaciones img{width: 100%;
-    margin: 10px 0px;}
+.descargaAndroid{height: 70vh;background: url(../img/andrid.jpg) no-repeat center;background-attachment: fixed;background-size: cover;display: flex;}
+.descargaAndroid > div{width: 80%;margin: auto;background: #000000c9;padding: 20px;border-radius: 7px;align-items: center;}
 
+.Recomendaciones{margin-top: 50px;margin-bottom: 50px;}.Recomendaciones img{width: 100%;margin: 10px 0px;}
 
-
-
-#Colecciones{}
+#Colecciones{margin-top: 50px;margin-bottom: 50px;}
 #Colecciones .col-6{display: flex;}
 #Colecciones .col-6 img{width: 80%;
     margin: auto;
@@ -111,7 +153,18 @@ nav.navbar:hover{opacity: 1;
     border-radius: 7px;
 }
 
-
+.peliAccion .container{position: relative;}
+.peliAccion .container .peliAccion_carusel{overflow: hidden;}
+.peliAccion .container button{position: absolute;
+    font-size: 250%;
+    top: calc(50% - 30px);
+    background: none;
+    border: none;
+    color: white;
+    opacity: .8;
+    z-index: 20;}
+.peliAccion .container .peliAccion_carusel_prev{}
+.peliAccion .container .peliAccion_carusel_next{right: 0}
 
 
 
@@ -155,61 +208,29 @@ nav.navbar:hover{opacity: 1;
 .headerPelis .content > div{margin-bottom: 20px;}
 .headerPelis .content > div h1{font-size: 300%;}
 
-.listaPelis.container{}
-.listaPelis.container .target{position: relative;
-    padding: 20px;transition: all .3s;cursor: pointer;}
-.listaPelis.container .target .panelOscuro{background: #000000c9;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.listaPelis .row img{box-shadow: 0px 0px 5px;
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all .3s;display: none;}
+    margin: 15px 0px;
+    border-radius: 7px;
+    border: 1px #50686d solid;}
 
-
-
-
-.listaPelis.container .target > img{width: 100%;
-    box-shadow: 1px 2px 8px #0d6efd;
-    border-radius: 7px;}
-.listaPelis.container .modal-body img{width: 50%;}
-.listaPelis.container .modal-body{display: flex;}
-.listaPelis.container .modal-body > div{width: 50%;display: flex;flex-direction: column;padding: 12px;}
-.listaPelis.container .modal-body > div *{margin: auto;width: 100%}
-.listaPelis.container .modal-body > div p{height: 50%;}
-
-.buscarEnLaPagina{position: fixed;
-    bottom: 10px;
-    left: 20px;
-    width: 90%;
-    z-index: 100;
-    background: #000000c9;
-    border-radius: 7px;}
-.buscarEnLaPagina .iconBusc{display: flex;
-    align-items: center;
-    border: 1px #0d6efd solid;
-    border-radius: 7px;}
-.buscarEnLaPagina .iconBusc i{cursor: pointer;
-    font-size: 150%;
-    padding: 4px;
-    margin: 0px 10px;}
-.buscarEnLaPagina .iconBusc input{border: 0px;
-    background: transparent;
-    color: white;
-    font-size: 150%;}
-.resultadoBusquedaPage{background: #000000c9;
-    position: absolute;
-    bottom: 38px;
-    left: 0;
-    width: 100%;
-    height: 465px;
-    z-index: 200;overflow-y: scroll;display: none;}
-#closeBuscPage{font-size: 150%;
-    padding: 5px;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;}
+.secionDownloads{position: fixed;
+    width: 70%;
+    bottom: -1px;
+    left: 15%;
+    background: #212529;
+    border: 1px #50686d solid;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: 0px 0px 3px #212529;
+    z-index: 300;transition: all .3s;
+    transform: translateY(100%);
+    opacity: 0;}
+.secionDownloads > div{display: flex;align-items: center; width: 100%;font-size: 100%;border-bottom: 1px #6c757d solid;margin: 15px 0px;
+    text-shadow: 0px 0px 4px #0d6efd;}
+.secionDownloads > div img{width: 50%;height: 200px;}
+.secionDownloads .btn-close{margin-left: auto; }
 
 
 @media (min-width:765px){
@@ -219,11 +240,19 @@ nav.navbar:hover{opacity: 1;
 nav.navbar{border-radius: 50px;}
 .descargaAndroid > div{padding: 30px;}
 .peliYseriesSemana .img img{width: 100%;margin: auto;}
+.peliAccion .container .peliAccion_carusel_prev{left: -25px;}
+.peliAccion .container .peliAccion_carusel_next{right: -25px;}
+#resultadoBusquedaPage > div{width: 33%;}
+.secionDownloads > div img{height: 300px;}
+
 }
 @media (min-width:1024px){
 .headerPelis .content > div {font-size: 150%;padding: 15px;}
 .header .fondo > div > h1 {margin-top: auto;width: 60%;font-size: 300%;text-align: left;}
 .header .fondo > div > p {margin-bottom: 70px;font-size: 130%;width: 80%;text-align: left;}
 .descargaAndroid > div{padding: 40px;}
+.peliAccion .container .peliAccion_carusel_prev{left: -30px;}
+.peliAccion .container .peliAccion_carusel_next{right: -30px;}
+#resultadoBusquedaPage > div{width: 25%;}
 
 }

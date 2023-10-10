@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html id="hh" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Base de datos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<style type="text/css">
+.cont{display: flex;flex-direction: column;width: 500px}
+.cont > *{margin: 10px}
+
+
+</style>
+</head><body class="body">
+
+<div class="cont">
+	<input id="poster" placeholder="poster" type="text" name="poster">
+	<input id="name" placeholder="name"  type="text" name="name">
+	<input id="id" placeholder="id"  type="text" name="id">
+	<input id="urlVId" placeholder="urlVId"  type="text" name="urlVId">
+	<input id="urlSub"  placeholder="urlSub" type="text" name="urlSub">
+
+	<button id="Save" class="btn btn-primary">Save</button>	
+	<button id="Ver" class="btn btn-primary">Ver</button>	
+
+	<input id="resulPoster" type="text" name="">
+	<input id="resulName" type="text" name="">
+	<input id="resulId" type="text" name="">
+	<input id="resulUrlVid" type="text" name="">
+	<input id="resulUrlSub" type="text" name="">
+</div>
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------->
+</body>
+	<script src="js/jquery.js"></script>
+<script type="text/javascript">
+
+bd_Poster = [];
+bd_Name=[];
+bd_id_modal=[];
+bd_url_vid=[];
+bd_url_sub=[];
+
+$('#Save').click(function(i){
+	bd_Poster.push(getId("poster").value);
+	getId("poster").value ='';
+	bd_Name.push(getId("name").value);
+	getId("name").value ='';
+	bd_url_vid.push(getId("urlVId").value);
+	getId("urlVId").value ='';
+	bd_url_sub.push(getId("urlSub").value);
+	getId("urlSub").value ='';
+	bd_id_modal.push(genID());
+
+});
+$('#Ver').click(function(i){
+	getId("resulPoster").value = agruparDatos(bd_Poster);
+	getId("resulName").value = agruparDatos(bd_Name);
+	getId("resulId").value = agruparDatos(bd_id_modal);
+	getId("resulUrlVid").value = agruparDatos(bd_url_vid);
+	getId("resulUrlSub").value = agruparDatos(bd_url_sub);
+});
+
+function genID() {
+	while(true){
+		var temp = aCaracter(10,"Qq");
+		var a=true;
+		for (var i = 0; i < bd_id_modal.length; i++) {
+			if (bd_id_modal[i] == temp) {a=false}
+		}
+		if (a){return temp;}		
+	}
+}
+function agruparDatos(a) {
+	var temp = "[";
+for (var i = 0; i < a.length; i++) {
+	temp=temp+"\""+a[i]+"\",";
+}
+return temp.substring(0,temp.length - 1) + "]";
+
+
+
+}
+
+function aCaracter(a,b){var temp,sum = "";var c = ["qwertyuiopasdfghjklzxcvbnm","QWERTYUIOPASDFGHJKLZXCVBNM","0123456789"];if (a == undefined) {a=10;}for (var i = 0; i < a; i++) {if (b == undefined){temp = c[aNumero(2)];temp = temp[aNumero(temp.length - 1)];}else{do{temp = aNumero(2);if (temp == 0 && b.indexOf("q") != -1) {temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else if(temp == 1 && b.indexOf("Q") != -1){temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else if(temp == 2 && b.indexOf("1") != -1){temp = c[temp];temp = temp[aNumero(temp.length - 1)];}else{temp = -1;}}while(temp == -1);}sum += temp;}return sum;}
+function getId(id){return document.getElementById(id)}
+function aNumero(a,b,c){var temp;if (b == undefined){b = a;a = 0;}do{temp = Math.random()*b;}while(a >= temp);if (c == undefined){temp=Math.round(temp);}else{temp = temp.toFixed(c);}return temp;}
+
+
+
+</script>
+	<script src="js/bootstrap.js"></script>
+</html>

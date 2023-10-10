@@ -35,29 +35,28 @@ $('').data();
 $('').removeData();
 $('').addClass();
 $('').removeClass();
-$('').toggleClass();
+$('').toggleClass();find('p')
 */
 $(function() {
-AOS.init({  
-	delay: 10, // values from 0 to 3000, with step 50ms
-  duration: 2000, // values from 0 to 3000, with step 50ms
-  once: true, // whether animation should happen only once - while scrolling down
+
+
+
+var arrayName = []
+
+
+$('.listaPelis .target').each(function(i){
+	var ts =$(this);
+	$("#resultadoBusquedaPage").html(
+		$("#resultadoBusquedaPage").html() + "<div data-bs-toggle=\"modal\" data-bs-target=\""+
+		ts.attr("data-bs-target")+"\"><img width=\"30%\" src=\""+
+		ts.find(".modal-body > img").attr("src")+"\"><p>"+ts.find(".modal-title").html()+"</p></div>");
+	arrayName.push(ts.find(".modal-title").html());
 });
+alert(arrayName)
+;
 
 
 
-
-
-$(".alertt").click(function() {
-	$('#alertaDesarrollo').css({'transform':'translate(0)','opacity':'1'});
-	/*setTimeout(function() {
-		cerrarAlertaDesarrollo()
-	},6000);*/
-});
-$("#closeAlertaDesarrollo").click(function() {cerrarAlertaDesarrollo()});
-function cerrarAlertaDesarrollo() {
-	$('#alertaDesarrollo').css({'transform':'translateY(120%)','opacity':'0'});
-}
 
 
 
