@@ -1,0 +1,99 @@
+/*!
+ * Materialize v1.0.0 (http://materializecss.com)
+ * Copyright 2014-2017 Materialize
+ * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+ */
+
+
+.matCarousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.matCarousel.matCarousel-slider {
+  top: 0;
+  left: 0;
+}
+
+.matCarousel.matCarousel-slider .matCarousel-fixed-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.matCarousel.matCarousel-slider .matCarousel-fixed-item.with-indicators {
+  bottom: 68px;
+}
+
+.matCarousel.matCarousel-slider .matCarousel-item {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.matCarousel.matCarousel-slider .matCarousel-item h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.matCarousel.matCarousel-slider .matCarousel-item p {
+  font-size: 15px;
+}
+
+.matCarousel .matCarousel-item {
+  visibility: hidden;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.matCarousel .matCarousel-item > img {
+  width: 100%;
+}
+
+.matCarousel .indicators {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.matCarousel .indicators .indicator-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 24px 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  border-radius: 50%;
+}
+
+.matCarousel .indicators .indicator-item.active {
+  background-color: #fff;
+}
+
+.matCarousel.scrolling .matCarousel-item .materialboxed,
+.matCarousel .matCarousel-item:not(.active) .materialboxed {
+  pointer-events: none;
+}

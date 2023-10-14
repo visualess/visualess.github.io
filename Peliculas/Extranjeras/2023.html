@@ -7,137 +7,135 @@
     <title>Peliculas 2023</title>
     <link rel="stylesheet" href="../../css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/aos.css">
+    <link rel="stylesheet" href="../../css/materialize.css">
+    <!-- <link rel="stylesheet" href="../../css/aos.css"> -->
     <link rel="stylesheet" href="../../css/style.css">
 </head><body class="body">
 <div id="loader"><h2>Visuales UI</h2></div>
 <a class="IrAriba" href="#headerPelis"><i class="fa fa-arrow-up"> </i></a>
 
+
+
+<!------------------------------
+        Menu de navegacion
+--------------------------------->
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" data-aos="fade-down">
   <div class="container-fluid">
-  	<a class="navbar-brand" href="../../index.html">
-      <img src="../../img/klipar2tz.com.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top"> Visuales Ui
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="fa fa-th"></span>
-    </button>
+  	<a class="navbar-brand" href="../../index.html"><img src="../../img/logo.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top"> Visuales Ui</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-th"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Pelicula</a>
-        </li>
-        <li class="nav-item" aria-current="page" data-bs-toggle="modal" data-bs-target="#NavSeries">
-          <a class="nav-link" href="#">Series</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link alertt" href="#">Documentales</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link alertt" href="#">Infantiles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link alertt" href="#">Nosotros</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Pelicula</a></li>
+            <li class="nav-item" aria-current="page" data-bs-toggle="modal" data-bs-target="#NavSeries"><a class="nav-link" href="#">Series</a></li>
+            <li class="nav-item"><a class="nav-link alertt" href="#">Documentales</a></li>
+            <li class="nav-item"><a class="nav-link alertt" href="#">Infantiles</a></li>
+            <li class="nav-item"><a class="nav-link alertt" href="#">Nosotros</a></li>
+        </ul>
     </div>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2 alertt" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success alertt" type="submit">Search</button>
-    </form>
+    <label id="search" class="d-flex w-100" role="search">
+      <input id="search_input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <div id="ResulSearch"></div>
+    </label>
   </div>
 </nav>
-
-<!-- Modal -->
+<!-------------- Año de la Peli -------------->
 <div class="modal fade modal-xl modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecione año de la Peli ...</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      <div class="modal-header"><h1 class="modal-title fs-5" id="exampleModalLabel">Selecione año de la Peli ...</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
       <div class="modal-body">
       	<a class="btn btn-outline-primary" role="button" href="Peliculas/Extranjeras/2023.html">2023</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2022</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2021</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2020</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2019</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2018</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2017</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2016</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2015</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2014</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2013</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2012</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2011</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2010</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2009</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2008</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2007</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2006</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2005</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2004</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2003</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2002</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2001</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2000</a>
       </div>
     </div>
   </div>
 </div>
-<!-- Modal -->
+<!-------------- Categoria de la Serie -------------->
 <div class="modal fade modal-lg modal-dialog-scrollable" id="NavSeries" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecione la categoria de la Serie ...</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      	<div class="container">
-      		<div class="row">
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="../../img/da.png"><h2>NETFLIX</h2>
-      			</a></div>
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="../../img/ing.png"><h2>Ingles</h2>
-      			</a></div>
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="../../img/es.png"><h2>Español</h2>
-      			</a></div>
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="../../img/cu.png"><h2>Cubanos</h2>
-      			</a></div>
-      		</div>
-      	</div>
-      </div>
-    </div>
-  </div>
-</div>
-<header id="headerPelis" class="headerPelis"><div class="content">
-	<img src="../../img/klipartwz.com.png"><div>
+        <div class="modal-header"><h1 class="modal-title fs-5" id="exampleModalLabel">Selecione la categoria de la Serie ...</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body"><div class="container"><div class="row">
+            <div class="col-12 col-md-6"><a href="#"><img class="icon" src="../../img/da.png"><h2>NETFLIX</h2></a></div>
+      		<div class="col-12 col-md-6"><a href="#"><img class="icon" src="../../img/ing.png"><h2>Ingles</h2></a></div>
+      		<div class="col-12 col-md-6"><a href="#"><img class="icon" src="../../img/es.png"><h2>Español</h2></a></div>
+      		<div class="col-12 col-md-6"><a href="#"><img class="icon" src="../../img/cu.png"><h2>Cubanos</h2></a></div>
+</div></div></div></div></div></div>
+<!--===================== Menu de navegacion =====================-->
+
+
+
+
+<header id="headerPelis" class="headerPelis"><div class="content"><div>
 	<h1>Peliculas de 2023</h1>
-	<p class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur.</p></div>
-</div></header>
-<a class="IrAriba" href="#headerPelis"><i class="fa fa-arrow-up"> </i></a>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do iusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></div>
+    <img class="d-none d-md-block" src="../../img/icon1.png">
+</div><a id="IrContBody" href="#contBody"><i class="fa fa-angle-double-down"></i></a></header>
 
 
-<div class="container-fluid"><div class="row">
-	<div class="col-1 col-sm-3 col-md-2">
+<div id="contBody" class="container-fluid"><div class="row">
+	<div class="col-2 col-sm-3 col-md-2 d-flex">
 	<!-- Promociones y mas-->
-		Lorem ipsum dolor sit amet.
+		<div class="PromocionesYMas row">
+            <div><p class="d-none d-md-block">Descarga apk</p><img src="../../img/logo-android.png">
+                <div class="panel">
+                    <h4><i class="fa fa-android"></i> Nuestra vercion en andrid ...</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a class="btn btn-outline-primary" href=""><i class="fa fa-download"></i> Link</a>
+                </div>
+            </div>
+            <div><p class="d-none d-md-block">Promociones</p><img src="../../img/promociones.png">
+                <div class="panel">
+                    <h4><i class="fa fa-bullhorn"></i> Enterate de lo ultimo ...</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a class="btn btn-outline-primary" href=""><i class="fa fa-download"></i> Saber</a>
+                </div>
+            </div>
+            <div><p class="d-none d-md-block">Window v.1 </p><img src="../../img/win.png">
+                <div class="panel">
+                    <h4><i class="fa fa-windows"></i> Nueva verción Window UI...</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a class="btn btn-outline-primary" href=""><i class="fa fa-download"></i> Ir</a>
+                </div>
+            </div>
+
+        </div>
 	</div>
-	<div class="col-11 col-sm-9 col-md-10">
+	<div class="col-10 col-sm-9 col-md-10">
+        <div class="tuPelis"><div class="matCarousel">
+            <h3>Tus pelis ...</h3>
+            <a class="matCarousel-item"><img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2010/Grown%20Ups%20(2010)/poster.jpg"></a>
+            <a class="matCarousel-item"><img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2021/Outside%20the%20Wire%20(2021)/poster.jpg"></a>
+            <a class="matCarousel-item"><img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2017/Detroit%20(2017)/poster.jpg"></a>
+            <a class="matCarousel-item"><img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2016/Genius%20(2016)/poster.jpg"></a>
+            <a class="matCarousel-item"><img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2020/Pieces%20of%20a%20Woman%20(2020)/poster.jpg"></a>
+            <a class="matCarousel-item"><img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2020/Riders%20of%20Justice%20(2020)/poster.jpg"></a>
+         </div> </div>        
+        <div class="tuSeries container">
+            <div class="clip clip1"><div><img src="https://visuales.uclv.cu/Series/NETFLIX/Stranger.Things/poster.jpg"><h2>Stranger Things</h2></div></div>
+            <div class="clip clip2"><div><img src="https://visuales.uclv.cu/Series/NETFLIX/La%20Casa%20de%20Papel/poster.jpg"><h2>La Casa de Papel</h2></div></div>
+            <div class="clip clip3"><div><img src="https://visuales.uclv.cu/Series/NETFLIX/Ragnarok/poster.jpg"><h2>Ragnarok</h2></div></div>
+        </div>
+
 		<section class="container listaPelis">
 			<div class="row">
 				
 			</div>
 		</section>
+        
+        <div class="cargarMas"><i class="fa fa-plus-square-o"></i> Cargar mas ... </div>
+        
+
 	</div>
-</div>
+</div></div>
 
 <section class="secionDownloads">
 	<div><h2 id="name_secionDownloads">Hola mundo</h2><button type="button" class="btn-close"></button></div>
@@ -155,22 +153,41 @@
 
 
 
+<footer class="footer">
+    <div class="d-flex"><img src="../../img/logo.png"><div><h2>©2023 Visuales UI</h2><p>Todos los derechos reservado ...</p></div></div>
+        <div class="container"><div class="row">
+            <div class="col-12 col-md-6 col-lg-4"><h4>Email</h4><p><i class="fa fa-envelope-o"></i> visales@mailfence.com</p></div>
+            <div class="col-12 col-md-6 col-lg-4"><h4>Github</h4><a href="https://github.com/visualess/visualess.github.io"><i class="fa fa-github"></i> github.com/visualess</a></div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <a class="rs" href="https://www.facebook.com/profile.php?id=61552118886441"><i class="fa fa-facebook-official"></i></a>
+                <a class="rs" href="https://twitter.com/VisualesUI"><i class="fa fa-twitter-square"></i></a>
+            </div>
+        </div></div>
+    <p>Por favor, leer los <a href="">terminos de servicios</a> y <a href="">nuestras politicas de privacidad</a> para mas información ...</p>
+</footer>
 <!----------------------------------------------------------------------->
 </body>
 	<script src="../../js/jquery.js"></script>
-	<script src="../../js/bootstrap.js"></script>
-    <script src="../../js/aos.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/materialize.js"></script>
+	<script src="../../js/bd_search.js"></script>
+    <!-- <script src="../../js/aos.js"></script> -->
 <script type="text/javascript">
 window.onload = function(){          
     $("#loader").fadeOut(2000); //ocultamos la imagen de pre-carga cuando la página ha terminado de cargar    
 }
+$(document).ready(function(){
+    $('.matCarousel').matCarousel();
+  });
+var hHeader = $("#headerPelis").height();
 window.onscroll = () =>{var s = getScroll();
     if (s<150){$('.IrAriba').removeClass('fi');} else {$('.IrAriba').addClass('fi');} 
+    if (s<hHeader){$('.PromocionesYMas').removeClass('PromocionesYMasFixed');} else {$('.PromocionesYMas').addClass('PromocionesYMasFixed');} 
 };function getScroll() {return window.pageYOffset;}
-AOS.init({  
-	delay: 10, // values from 0 to 3000, with step 50ms
-	duration: 2000, // values from 0 to 3000, with step 50ms
-	once: true, // whether animation should happen only once - while scrolling down
-});</script>
+ // AOS.init({  
+ // 	delay: 10, // values from 0 to 3000, with step 50ms
+ // 	duration: 2000, // values from 0 to 3000, with step 50ms
+ // 	once: true, // whether animation should happen only once - while scrolling down
+ // });</script>
 	<script src="bd_2023.js"></script>
 </html>

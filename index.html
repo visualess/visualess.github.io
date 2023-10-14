@@ -14,106 +14,53 @@
 <div id="loader"><h2>Visuales UI</h2></div>
 <a class="IrAriba" href="#header"><i class="fa fa-arrow-up"> </i></a>
 
+<!------------------------------
+        Menu de navegacion
+--------------------------------->
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" data-aos="fade-down">
   <div class="container-fluid">
-  	<a class="navbar-brand" href="index.html">
-      <img src="img/klipar2tz.com.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top"> Visuales Ui
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="fa fa-th"></span>
-    </button>
+    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top"> Visuales Ui</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-th"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Pelicula</a>
-        </li>
-        <li class="nav-item" aria-current="page" data-bs-toggle="modal" data-bs-target="#NavSeries">
-          <a class="nav-link" href="#">Series</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link alertt" href="#">Documentales</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link alertt" href="#">Infantiles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link alertt" href="#">Nosotros</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Pelicula</a></li>
+            <li class="nav-item" aria-current="page" data-bs-toggle="modal" data-bs-target="#NavSeries"><a class="nav-link" href="#">Series</a></li>
+            <li class="nav-item"><a class="nav-link alertt" href="#">Documentales</a></li>
+            <li class="nav-item"><a class="nav-link alertt" href="#">Infantiles</a></li>
+            <li class="nav-item"><a class="nav-link alertt" href="#">Nosotros</a></li>
+        </ul>
     </div>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2 alertt" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success alertt" type="submit">Search</button>
-    </form>
+    <label id="search" class="d-flex w-100" role="search">
+      <input id="search_input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <div id="ResulSearch"></div>
+    </label>
   </div>
 </nav>
-
-<!-- Modal -->
+<!-------------- Año de la Peli -------------->
 <div class="modal fade modal-xl modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecione año de la Peli ...</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      <div class="modal-header"><h1 class="modal-title fs-5" id="exampleModalLabel">Selecione año de la Peli ...</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
       <div class="modal-body">
-      	<a class="btn btn-outline-primary" role="button" href="Peliculas/Extranjeras/2023.html">2023</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2022</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2021</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2020</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2019</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2018</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2017</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2016</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2015</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2014</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2013</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2012</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2011</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2010</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2009</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2008</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2007</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2006</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2005</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2004</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2003</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2002</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2001</a>
-      	<a class="btn btn-outline-primary" role="button" href="#">2000</a>
+        <a class="btn btn-outline-primary" role="button" href="Peliculas/Extranjeras/2023.html">2023</a>
       </div>
     </div>
   </div>
 </div>
-<!-- Modal -->
+<!-------------- Categoria de la Serie -------------->
 <div class="modal fade modal-lg modal-dialog-scrollable" id="NavSeries" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecione la categoria de la Serie ...</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      	<div class="container">
-      		<div class="row">
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="img/da.png"><h2>NETFLIX</h2>
-      			</a></div>
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="img/ing.png"><h2>Ingles</h2>
-      			</a></div>
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="img/es.png"><h2>Español</h2>
-      			</a></div>
-      			<div class="col-12 col-md-6"><a href="#">
-      				<img class="icon" src="img/cu.png"><h2>Cubanos</h2>
-      			</a></div>
-      		</div>
-      	</div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="modal-header"><h1 class="modal-title fs-5" id="exampleModalLabel">Selecione la categoria de la Serie ...</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body"><div class="container"><div class="row">
+            <div class="col-12 col-md-6"><a href="#"><img class="icon" src="img/da.png"><h2>NETFLIX</h2></a></div>
+            <div class="col-12 col-md-6"><a href="#"><img class="icon" src="img/ing.png"><h2>Ingles</h2></a></div>
+            <div class="col-12 col-md-6"><a href="#"><img class="icon" src="img/es.png"><h2>Español</h2></a></div>
+            <div class="col-12 col-md-6"><a href="#"><img class="icon" src="img/cu.png"><h2>Cubanos</h2></a></div>
+</div></div></div></div></div></div>
+<!--===================== Menu de navegacion =====================-->
+
+
 <section id="header" class="header"><div class="fondo"><div>
     <h1 data-aos="fade-left" data-aos-offset="30">Visuales Interfas de usuario. Beta</h1>
     <p data-aos="fade-left" data-aos-offset="30">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -241,40 +188,6 @@
 </section>
 
 
-<div class="Caruselheader container separadorSecion">
-<div id="Caruselheader" class="carousel slide h-70" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2009/Ninja%20(2009)/fanart.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-md-block">
-        <h2><img width="50px" height="70px" src="https://visuales.uclv.cu/Peliculas/Extranjeras/2009/Ninja%20(2009)/poster.jpg">Ninja</h2>
-        <p class="d-none d-md-block">Casey es un chico occidental cuya pasión por la filosofía ninja le lleva hasta Japón para estudiar Ninjutsu. Su instrucción avanza favorablemente y su Sensei le pregunta si estaría dispuesto a volver a Nueva York para proteger la legendaria Yoroi Bitsu, un arcón blindado que contiene las armas de los últimos Ninja Koga</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Dark%20Places%20(2015)/fanart.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-md-block">
-        <h2><img width="50px" height="70px" src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Dark%20Places%20(2015)/poster.jpg"> Dark Places </h2>
-        <p class="d-none d-md-block">Una chica de Kansas sobrevive a la masacre de su familia y testifica en contra de su hermano como el asesino. 25 años después será visitada por una sociedad secreta que reclama la inocencia de su hermano. De algún modo, tan sólo reviviendo la tragedia podrá averiguar la verdad.</p>
-      </div>
-    </div>
-    <div class="carousel-item active" data-bs-interval="2000">
-      <img src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Extinction%20(2015)/fanart.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-md-block">
-        <h2><img width="50px" height="70px" src="https://visuales.uclv.cu/Peliculas/Extranjeras/2015/Extinction%20(2015)/poster.jpg"> Extinction  </h2>
-        <p class="d-none d-md-block">Nueve años después de que una infección convirtiese a gran parte de la humanidad en criaturas salvajes y sin intelecto, Patrick, Jack y Lu, una niña de nueve años, sobreviven en aparente tranquilidad en Harmony, un rincón olvidado, cubierto por nieves perennes. Sin embargo, algo terrible ocurrió entre Patrick y Jack y un odio profundo pervive entre ellos. Cuando las criaturas vuelven a aparecer, Patrick y Jack deberán dejar atrás el rencor para proteger lo que más quieren.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#Caruselheader" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#Caruselheader" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div></div>
 <!--  tecnologias utilzadas  -->
 <section class="tecnUser">
     <h2>Herraminetas utilizadas</h2>
@@ -291,15 +204,14 @@
     </div>
 </section>
 <footer class="footer">
-    <img src=""><h2>©2023 Visuales UI</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+    <div class="d-flex"><img src="img/logo.png"><div><h2>©2023 Visuales UI</h2><p>Todos los derechos reservado ...</p></div></div>
         <div class="container"><div class="row">
-            <div class="col-12 col-md-6 col-lg-4">Hola mundo</div>
-            <div class="col-12 col-md-6 col-lg-4">Hola mundo</div>
-            <div class="col-12 col-lg-4"><h3>Contactanos</h3>
-                <h4>Correo electronico</h4><p><i class="fa fa-envelope-o"></i> visales@mailfence.com</p>
-                <h4>Repocitorio en github</h4><a href="https://github.com/visualess/visualess.github.io"><i class="fa fa-github"></i> visualess.github.io</a>
+            <div class="col-12 col-md-6 col-lg-4"><h4>Email</h4><p><i class="fa fa-envelope-o"></i> visales@mailfence.com</p></div>
+            <div class="col-12 col-md-6 col-lg-4"><h4>Github</h4><a href="https://github.com/visualess/visualess.github.io"><i class="fa fa-github"></i> github.com/visualess</a></div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <a class="rs" href="https://www.facebook.com/profile.php?id=61552118886441"><i class="fa fa-facebook-official"></i></a>
+                <a class="rs" href="https://twitter.com/VisualesUI"><i class="fa fa-twitter-square"></i></a>
             </div>
-
         </div></div>
     <p>Por favor, leer los <a href="">terminos de servicios</a> y <a href="">nuestras politicas de privacidad</a> para mas información ...</p>
 </footer>
@@ -320,6 +232,7 @@
 	<script src="js/bootstrap.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/glider.js"></script>
+    <script src="js/bd_search.js"></script>
 	<script src="js/script.js"></script>
     <script type="text/javascript">
     window.onload = function(){          
